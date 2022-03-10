@@ -1,0 +1,65 @@
+
+Установка SQLite
+https://linuxhint.com/install-sqlite-ubuntu-linux-mint/
+
+
+Евгений Волосатов
+1. База SQLite - Установка, создание таблицы, набор SQL-запросов
+
+https://www.youtube.com/watch?v=O5UpLpekpdw&list=PLt5E226f3KMHwlGPnSQGPuQsic3_2JIlv&index=1
+
+
+
+
+sqlite3 - запустит
+.open us.db - создаст базу данных в папке home/alex
+
+если сначало в терминале перейти в  нужную папку, запустить sqlite3 и .open test.db ?
+то создаст БД test в папке  где была запущены  sqlite3.
+
+.halp   - все команды из командной строки
+
+.quit   - выход из программы
+
+
+ .open users.db
+CREATE TABLE users (
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+name VARCHAR(50),
+phone VARCHAR(50) );
+
+
+
+.tables
+.schema users
+
+INSERT INTO users (name,phone) VALUES ('Jevgenij2','+3701111');
+INSERT INTO users (name,phone)
+VALUES ('Jevgenij','+3701111');
+
+INSERT INTO users (name,phone)
+VALUES ('DeniZrf','+3703333');
+
+INSERT INTO users (name,phone)
+VALUES ('AlekZZ','+3702222');
+
+INSERT INTO users (name,phone)
+VALUES ('Ilia','+3709999');;
+
+INSERT INTO users (name,phone)
+VALUES ('AlekZZ','+3702222');
+
+SELECT*FROM users;
+
+представление в блочном виде.
+.mode line
+
+или в виде колонок
+.mode column
+
+включение заголовок
+.header on
+
+потбор ширины колонок
+.width 2 8 8
+

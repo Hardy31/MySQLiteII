@@ -1,0 +1,20 @@
+
+Евгений Волосатов
+2. База SQLite - Подключение из Java
+https://www.youtube.com/watch?v=XnWYNIMTRHY&list=PLt5E226f3KMHwlGPnSQGPuQsic3_2JIlv&index=2
+
+
+
+для того чтобы запустить Program.main()
+Необходимо подключить Библиотеку!
+File->ProjectStructure->Libraries.add()
+
+лежит она здесь-
+
+     /home/alex/Загрузки/sqlite-jdbc-3.27.2.1.jar
+
+
+
+в пакете Lesson Final   - Лежит полная редакция из урока Евгения Волосатова
+
+начиная с 9 минуты запуск через консоль
