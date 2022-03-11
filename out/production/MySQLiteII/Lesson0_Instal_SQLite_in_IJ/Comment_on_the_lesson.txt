@@ -23,10 +23,11 @@ sqlite3 - запустит
 
 
  .open users.db
-CREATE TABLE users (
+CREATE TABLE users.db (
 id INTEGER PRIMARY KEY AUTOINCREMENT,
 name VARCHAR(50),
 phone VARCHAR(50) );
+
 
 
 

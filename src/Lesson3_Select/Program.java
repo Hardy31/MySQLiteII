@@ -1,4 +1,4 @@
-package Lesson2_SQLite_Insert;
+package Lesson3_Select;
 
 import java.sql.*;
 import java.util.Scanner;
@@ -29,7 +29,8 @@ public class Program {
     public static void main(String[] args) throws SQLException {
         Program program = new Program();
         program.open();
-        program.insert();
+//        program.insert();
+        program.select();
         program.close();
     }
 
@@ -56,7 +57,7 @@ public class Program {
         System.out.println("Введите Имя пользьзователя : ");
         String phone = scan.nextLine();
 
-        String query = "INSERT INTO users2 (name,phone) VALUES ('"+ name +"','"+ phone +"');";
+        String query = "INSERT INTO users2.db (name,phone) VALUES ('"+ name +"','"+ phone +"');";
         statmt = conn.createStatement();
         statmt.executeUpdate(query);
 
@@ -71,6 +72,25 @@ public class Program {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
+    }
+
+    void select(){
+        try {
+            Statement statement = conn.createStatement();
+            String query = "SELECT * FROM users2 ORDER BY name ";
+            ResultSet rs = statement.executeQuery(query);
+            while (rs.next()){
+                int id = rs.getInt("id");
+                String name = rs.getString("name");
+                String phone = rs.getString("phone");
+                System.out.println(id +"   "+name +"     \t "+phone );
+            }
+            rs.close();
+            statement.close();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+
     }
 
 //        try {
