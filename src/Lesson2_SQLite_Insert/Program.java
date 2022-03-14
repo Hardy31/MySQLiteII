@@ -3,7 +3,7 @@ package Lesson2_SQLite_Insert;
 import java.sql.*;
 import java.util.Scanner;
 
-
+//https://www.youtube.com/watch?v=Eta9knRFJLE&list=PLt5E226f3KMHwlGPnSQGPuQsic3_2JIlv&index=3
 //      !!!!!!!!!!!!!!!!!!!!!!!!!!!!
 //      !!!!!!!!!!!   ВАЖНО   !!!!!!
 //для того чтобы запустить Program.main()
